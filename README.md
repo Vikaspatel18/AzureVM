@@ -32,7 +32,7 @@
 <ul>
  	<li>After that create a Windows server and virtual machine within that resource group</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/2.png"><img class="alignnone size-full wp-image-150" src="https://vikaspatel.tech/wp-content/uploads/2023/04/2.png" alt="" width="2612" height="1630" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/2.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>To prevent the IP address of DC-1 from changing, we need to access its network settings. We can do this by selecting the 'Networking' option and clicking on the hyperlink next to the 'Network Interface' heading. From here, we should navigate to the 'IP Configurations' menu and locate 'ipconfig1'. By changing the assignment from dynamic to static, we can ensure that DC-1 retains its assigned IP address. Finally, we should verify that both VMs are connected to the same 'Vnet' by checking the NIC settings. This will facilitate communication and connectivity between the two machines during the remainder of the lab.</li>
 </ul>
