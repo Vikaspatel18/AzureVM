@@ -28,9 +28,9 @@
  	<li style="text-align: left;">We will establish two Virtual Machines (VMs) within a single Virtual Network (VNET). One of these machines will function as a Domain Controller, while the other will operate as a Client. We will modify the Domain Controller's IP address to be static because it will provide Active Directory services to the Client. The Client will then be joined to the domain, and we will manage the DNS configurations on this machine by setting the Domain Controller as the DNS server.</li>
  	<li>Create a resource group</li>
 </ul>
-<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/2.png" alt="" style="width: 100%; height: auto;" />
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/1.png" alt="" style="width: 100%; height: auto;" />
 <ul>
- 	<li>After that create a windows server and virtual machine within that resource group</li>
+ 	<li>After that create a Windows server and virtual machine within that resource group</li>
 </ul>
 <a href="https://vikaspatel.tech/wp-content/uploads/2023/04/2.png"><img class="alignnone size-full wp-image-150" src="https://vikaspatel.tech/wp-content/uploads/2023/04/2.png" alt="" width="2612" height="1630" /></a>
 <ul>
