@@ -65,19 +65,19 @@
 <ul>
  	<li>In order to connect Client-1 to the domain, we need to navigate to the system settings and select 'About'. Then, we should select 'Rename this PC (Advanced)' and opt to change the domain. We should enter 'mydomain.com' and provide the necessary credentials for mydomain.com\labuser. Once this is complete, the computer will restart and Client-1 will become part of the mydomain.com domain.</li>
 </ul>
-<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/10.png" alt="" style="width: 100%; height: auto;" />
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/5-1.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>Great! With Client-1 now a part of the domain, we can proceed to set up remote desktop access for non-administrative users. To do this, we will need to log into Client-1 as an administrator and open the system properties. Then, we should click on 'Remote Desktop' and grant access to 'domain users'. Once these steps are complete, normal users should be able to log into Client-1 using remote desktop access.</li>
 </ul>
-<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/11.png" alt="" style="width: 100%; height: auto;" />
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/8-1.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li dir="auto">Lastly to verify that normal users can RDP into Client-1 we will use a script to generate thousands of users into the domain. We will input the script in powershell, after the users are created we will select one and RDP into Client-1.</li>
 </ul>
-<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/12.png" alt="" style="width: 100%; height: auto;" />
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/9-1.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>Now we can login with any user</li>
 </ul>
-<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/13.png" alt="" style="width: 100%; height: auto;" />
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/11.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li> The login attempt with the user's name &amp; generic password should be successful. That is the conclusion of this lab.</li>
 </ul>
