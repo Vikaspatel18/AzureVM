@@ -45,39 +45,39 @@
  	<li>Ensure the communication between both VMs via ping using CMD.</li>
  	<li>Now we will install Active directory domain services in DC1.</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/5.png"><img class="alignnone size-full wp-image-154" src="https://vikaspatel.tech/wp-content/uploads/2023/04/5.png" alt="" width="2876" height="1716" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/5.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>Promote this server to a domain controller.</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/6.png"><img class="alignnone size-full wp-image-155" src="https://vikaspatel.tech/wp-content/uploads/2023/04/6.png" alt="" width="2872" height="1722" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/6.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>to proceed, we need to log back into DC-1 and install AD Users &amp; Computers. We should then promote the VM to DC and establish a new forest using the name 'mydomain.com'. Once the setup is complete, we should restart the machine and log back in using the user name 'mydomain.com\labuser'. If all of the preceding steps have been executed correctly, we should be able to run AD Users &amp; Computers, as demonstrated in the example below.</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/7.png"><img class="alignnone size-full wp-image-156" src="https://vikaspatel.tech/wp-content/uploads/2023/04/7.png" alt="" width="2612" height="1630" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/7.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>We can now proceed to create Organizational Units (OUs) within our system. The first step is to create an OU called '_EMPLOYEES' and another called '_ADMINS'. To do this, we need to right-click on the domain area, select 'New', and then choose 'Organizational Unit'. Once we have entered the necessary information, we can click inside the OU and create a new user by selecting 'New', then 'User', and entering the relevant data for the user. For this exercise, we will create a new user named Vikas Patel and assign him the username 'vikas_admin'. Finally, we should add Vikas to the domain admins security group.</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/1-1.png"><img class="alignnone size-full wp-image-159" src="https://vikaspatel.tech/wp-content/uploads/2023/04/1-1.png" alt="" width="2872" height="1630" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/8.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>Going forward, we will use the vikas_admin account as the administrator account. Next, we need to connect Client-1 to the domain (mydomain.com) by modifying its DNS settings in the Azure portal to match the private IP address of DC-1. After making these changes, we should restart Client-1 from within the portal. Once this is done, we can verify that Client-1 is connected to the DC-1 DNS, as depicted in the picture below.</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/9.png"><img class="alignnone size-full wp-image-158" src="https://vikaspatel.tech/wp-content/uploads/2023/04/9.png" alt="" width="2612" height="1630" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/9.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>In order to connect Client-1 to the domain, we need to navigate to the system settings and select 'About'. Then, we should select 'Rename this PC (Advanced)' and opt to change the domain. We should enter 'mydomain.com' and provide the necessary credentials for mydomain.com\labuser. Once this is complete, the computer will restart and Client-1 will become part of the mydomain.com domain.</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/5-1.png"><img class="alignnone size-full wp-image-160" src="https://vikaspatel.tech/wp-content/uploads/2023/04/5-1.png" alt="" width="2612" height="1630" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/10.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>Great! With Client-1 now a part of the domain, we can proceed to set up remote desktop access for non-administrative users. To do this, we will need to log into Client-1 as an administrator and open the system properties. Then, we should click on 'Remote Desktop' and grant access to 'domain users'. Once these steps are complete, normal users should be able to log into Client-1 using remote desktop access.</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/8-1.png"><img class="alignnone size-full wp-image-161" src="https://vikaspatel.tech/wp-content/uploads/2023/04/8-1.png" alt="" width="2612" height="1630" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/11.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li dir="auto">Lastly to verify that normal users can RDP into Client-1 we will use a script to generate thousands of users into the domain. We will input the script in powershell, after the users are created we will select one and RDP into Client-1.</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/9-1.png"><img class="alignnone size-full wp-image-162" src="https://vikaspatel.tech/wp-content/uploads/2023/04/9-1.png" alt="" width="2612" height="1630" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/12.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li>Now we can login with any user</li>
 </ul>
-<a href="https://vikaspatel.tech/wp-content/uploads/2023/04/11.png"><img class="alignnone size-full wp-image-163" src="https://vikaspatel.tech/wp-content/uploads/2023/04/11.png" alt="" width="2612" height="1630" /></a>
+<img class="alignnone wp-image-151 size-full" src="https://vikaspatel.tech/wp-content/uploads/2023/04/13.png" alt="" style="width: 100%; height: auto;" />
 <ul>
  	<li> The login attempt with the user's name &amp; generic password should be successful. That is the conclusion of this lab.</li>
 </ul>
